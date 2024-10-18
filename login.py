@@ -5,8 +5,9 @@ senha = []
 tent = 0
 valid= False
 
-def newlog(a):
-    while valid == False and tent<=3:
+
+#def newlog(a):
+while valid == False:
         import os
         os.system('cls')
         print('==' * 30)
@@ -24,12 +25,15 @@ def newlog(a):
             print('==' * 20)
             print('     ACESSO LIBERADO    ')
             print('==' * 20)
-            #valid = True
+            valid = True
             break
         else:
-            tent +=1
+            tent = tent + 1
 
-    if tent==3:
+    
+if tent==4:
+        import os
+        os.system('cls')
         print('==' * 20)
         print('     ACESSO NEGADO!!    ')
         print('==' * 20)
@@ -41,7 +45,7 @@ def newlog(a):
             print('==' * 20)
 
 
-
+# pagina primaria
 import os
 os.system('cls')
 
@@ -61,10 +65,9 @@ if acess == "sim":
     print('==' * 20)
     senha=str(input('SENHA:  '))
     print('==' * 20)
-    newlog()
 else:
-    newlog(acess)
+#     newlog(acess)
+# newlog(acess)
 
 # elif acess==("nao" or "NAO" or "Nao" or "não" or "NÃO" or "Não"):
 #     print('\n' * 6)
-    
