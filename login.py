@@ -29,11 +29,8 @@ acess=str(input("   ")).lower()
 print('==' * 20)
 print('\n' * 6)
 
-#def newlog(a):
-while valid == False:
-
     # Registro
-    if acess == "sim":
+if acess == "sim":
         import os
         os.system('cls')
         print('==' * 20)
@@ -43,8 +40,12 @@ while valid == False:
         print('==' * 20)
         senha=str(input('SENHA:  '))
         print('==' * 20) 
+        
 
-    else:
+#def newlog(a):
+while valid == False:
+    tent
+    if acess != "sim":
         # acessar
         import os
         os.system('cls')
@@ -60,8 +61,6 @@ while valid == False:
         senEn=str(input('ACESSE SUA SENHA:  '))
         print('==' * 20)
 
-
-
            #  validar
         if login == logEn and senha == senEn:
             print('==' * 20)
@@ -75,7 +74,7 @@ while valid == False:
 
             # ERRO
 
-            if tent==4:
+    if tent==3:
                 import os
                 os.system('cls')
                 print('==' * 20)
@@ -87,33 +86,10 @@ while valid == False:
                 if senha != senEn:
                     print('     SENHA INCORRETA!!    ')
                     print('==' * 20)
-                    print("  TENTAR NOVAMENTE??")
+                    print("\n" * 6)
+                    new=str(input("         TENTAR NOVAMENTE??"))
+                    if new ==" sim":
+                          newlog()
                     print('==' * 20)
-
-
-# # pagina primaria
-# import os
-# os.system('cls')
-
-# print('\n' * 6)
-# print('==' * 20)
-# print("     PRIMEIRO ACESSO??")
-# acess=str(input("   ")).lower()
-# print('==' * 20)
-# print('\n' * 6)
-# if acess == "sim":
-#     import os
-#     os.system('cls')
-#     print('==' * 20)
-#     print('     | REGISTRAR |    ')
-#     print('==' * 20)
-#     login=str(input('DEFINA SEU LOGIN:  '))
-#     print('==' * 20)
-#     senha=str(input('SENHA:  '))
-#     print('==' * 20)
-#else:
-     
-#     newlog(acess)
-# newlog(acess)
-# elif acess==("nao" or "NAO" or "Nao" or "não" or "NÃO" or "Não"):
-#     print('\n' * 6)
+                    break
+                    
