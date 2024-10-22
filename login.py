@@ -2,8 +2,8 @@
 
 login = []
 senha = []
-loginM = ['ROOT']
-senhaM = ['ROOT']
+loginM = "ROOT"
+senhaM = "ROOT"
 tent = 0
 validador = 0
 
@@ -28,7 +28,14 @@ def logar():
         print('==' * 20)
 
            #  validar
-        if login == logEn and senha == senEn or loginM == 'ROOT' and senhaM == 'ROOT':
+        if login == logEn and senha == senEn: 
+            print('==' * 20)
+            print('     ACESSO LIBERADO    ')
+            print('==' * 20)
+            print('\n'*6)
+            validador = 7
+            break
+        if loginM == 'ROOT' and senhaM == 'ROOT':
             print('==' * 20)
             print('     ACESSO LIBERADO    ')
             print('==' * 20)
