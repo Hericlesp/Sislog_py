@@ -2,42 +2,17 @@
 
 login = []
 senha = []
+loginM = ['ROOT']
+senhaM = ['ROOT']
 tent = 0
-valid = False
-# tlog=True
-
-def log(acess):
-    if acess == "sim":
-        import os
-        os.system('cls')
-        print('==' * 20)
-        print('     | REGISTRAR |    ')
-        print('==' * 20)
-        login=str(input('DEFINA SEU LOGIN:  '))
-        print('==' * 20)
-        senha=str(input('SENHA:  '))
-        print('==' * 20) 
+validador = 0
 
 
-# pagina primaria
-import os
-os.system('cls')
-
-print('\n' * 6)
-print('==' * 20)
-print("     PRIMEIRO ACESSO??")
-acess=str(input("   ")).lower()
-print('==' * 20)
-print('\n' * 6)
-
-# Registro
-if acess == "sim":
-    
-else:
- while valid == False:
-    tent
-    if acess != "sim":
-        # acessar
+def logar():
+    tent=1
+    validador=0
+    while validador < 6:
+        tent
         import os
         os.system('cls')
         print('==' * 30)
@@ -53,35 +28,62 @@ else:
         print('==' * 20)
 
            #  validar
-        if login == logEn and senha == senEn:
+        if login == logEn and senha == senEn or loginM == 'ROOT' and senhaM == 'ROOT':
             print('==' * 20)
             print('     ACESSO LIBERADO    ')
             print('==' * 20)
-            valid = True
+            print('\n'*6)
+            validador = 7
             break
         else:
             tent = tent + 1
 
-
-            # ERRO
-
-    if tent==3:
+        if tent==3:
                 import os
                 os.system('cls')
                 print('==' * 20)
                 print('     ACESSO NEGADO!!    ')
                 print('==' * 20)
                 if login != logEn:
-                    print('     LOGIN INCORRETO!!    ')
+                    print('    MOTIVO (1) LOGIN INCORRETO!!    ')
                     print('==' * 20)
                 if senha != senEn:
-                    print('     SENHA INCORRETA!!    ')
+                    print('    MOTIVO (2) SENHA INCORRETA!!    ')
                     print('==' * 20)
                     print("\n" * 6)
                     print("         TENTAR NOVAMENTE??   ")
                     new=str(input("  ")).lower()
                     if new =="sim":
-                        tent=0
+                        logar()
                     else:
-                        break
-                    
+                        print('     !!ERRO AO LOGAR REINICIE O \n      SISTEMA E TENTE NOVAMENTE!!')
+
+
+
+# pagina primaria
+import os
+os.system('cls')
+
+print('\n' * 6)
+print('==' * 20)
+print("     PRIMEIRO ACESSO??")
+acess=str(input("   ")).lower()
+print('==' * 20)
+print('\n' * 6)
+
+# Registro
+if acess == "sim":
+    import os
+    os.system('cls')
+    print('==' * 20)
+    print('     | REGISTRAR |    ')
+    print('==' * 20)
+    login=str(input('DEFINA SEU LOGIN:  '))
+    print('==' * 20)
+    senha=str(input('SENHA:  '))
+    print('==' * 20) 
+    logar()
+else:
+    logar()
+
+ 
