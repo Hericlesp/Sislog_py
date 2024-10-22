@@ -3,19 +3,20 @@
 login = []
 senha = []
 tent = 0
-valid= False
+valid = False
+# tlog=True
 
-# def log(acess)
-#     if acess == "sim":
-#         import os
-#         os.system('cls')
-#         print('==' * 20)
-#         print('     | REGISTRAR |    ')
-#         print('==' * 20)
-#         login=str(input('DEFINA SEU LOGIN:  '))
-#         print('==' * 20)
-#         senha=str(input('SENHA:  '))
-#         print('==' * 20) 
+def log(acess):
+    if acess == "sim":
+        import os
+        os.system('cls')
+        print('==' * 20)
+        print('     | REGISTRAR |    ')
+        print('==' * 20)
+        login=str(input('DEFINA SEU LOGIN:  '))
+        print('==' * 20)
+        senha=str(input('SENHA:  '))
+        print('==' * 20) 
 
 
 # pagina primaria
@@ -29,21 +30,11 @@ acess=str(input("   ")).lower()
 print('==' * 20)
 print('\n' * 6)
 
-    # Registro
+# Registro
 if acess == "sim":
-        import os
-        os.system('cls')
-        print('==' * 20)
-        print('     | REGISTRAR |    ')
-        print('==' * 20)
-        login=str(input('DEFINA SEU LOGIN:  '))
-        print('==' * 20)
-        senha=str(input('SENHA:  '))
-        print('==' * 20) 
-        
-
-#def newlog(a):
-while valid == False:
+    
+else:
+ while valid == False:
     tent
     if acess != "sim":
         # acessar
@@ -87,9 +78,10 @@ while valid == False:
                     print('     SENHA INCORRETA!!    ')
                     print('==' * 20)
                     print("\n" * 6)
-                    new=str(input("         TENTAR NOVAMENTE??"))
-                    if new ==" sim":
-                          newlog()
-                    print('==' * 20)
-                    break
+                    print("         TENTAR NOVAMENTE??   ")
+                    new=str(input("  ")).lower()
+                    if new =="sim":
+                        tent=0
+                    else:
+                        break
                     
